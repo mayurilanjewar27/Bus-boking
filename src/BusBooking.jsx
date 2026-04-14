@@ -9,7 +9,7 @@ function BusBooking() {
     seats: ""
   });
 
-  // ✅ Load data from localStorage when page loads
+  
   useEffect(() => {
     const savedData = localStorage.getItem("busBooking");
     if (savedData) {
@@ -17,7 +17,7 @@ function BusBooking() {
     }
   }, []);
 
-  // ✅ Handle input change
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -25,11 +25,11 @@ function BusBooking() {
     });
   };
 
-  // ✅ Handle submit
+
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("busBooking", JSON.stringify(formData));
-    alert("Booking Saved Successfully 🚍");
+    alert("Booking Saved Successfully ");
   };
 
   return (
@@ -95,7 +95,8 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#fff",
+
   },
   form: {
     display: "flex",
@@ -103,7 +104,7 @@ const styles = {
     gap: "10px",
     padding: "20px",
     borderRadius: "10px",
-    backgroundColor: "#fff",
+    backgroundColor: "#d0cdcd",
     width: "300px",
     boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
   },
